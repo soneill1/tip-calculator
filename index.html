@@ -20,21 +20,48 @@
   </div>
 
   <div class="container">
+
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-6 col-sm-offset-2">
         <div class="form-group">
           <label for="email">Price of Bill:</label>
-          <input type="text" class="form-control" id="txt1" placeholder="Enter number" name="email">
+          <input type="text" class="form-control" id="billPrice" placeholder="Price of bill" name="email">
         </div>
-        <button onclick="myFunction()" class="btn btn-success">Calculate</button>
+        <button onclick="calculateTipAmount()" class="btn btn-success">Calculate</button>
       </div>
-      <div id="myDiv" class="col-sm-4">
-        <p id="answer"></p>
-      </div>
-
     </div>
-  </div>
 
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-2">
+        <div class="slidecontainer">
+          <input type="range" min="5" max="35" value="20" class="slider" id="mySlider" oninput="updateSliderValue()">
+          <p><span id="result">20</span>%</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-2">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Tip</th>
+              <th>Amount</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="tip"></td>
+              <td id="amount"></td>
+              <td id="total"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
 </body>
 
 </html>
