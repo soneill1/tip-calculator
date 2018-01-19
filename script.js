@@ -17,5 +17,5 @@ function calculateTipAmount() {
 function updateSliderValue() {
   var slider = document.getElementById("mySlider");
   var result = document.getElementById("result");
-  result.innerHTML = slider.value;
+  result.innerHTML = slider.value + "%";
 }
