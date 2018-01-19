@@ -2,6 +2,7 @@
 
 .jumbotron {
   background-color: #5cb85c;
+  border-bottom: 1px solid black;
   color:white
 }
 
@@ -12,4 +13,5 @@
     max-height: 150px;
     height:150px;
     background-color: #ededed;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
