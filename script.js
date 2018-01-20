@@ -27,7 +27,16 @@ function updateSliderValue() {
   result.innerHTML = slider.value + "%";
 }
 
+
 jQuery(document).ready(function() {
+
+  // Calculate tip when enter pressed
+  $("#billPrice").keyup(function(event) {
+    if (event.keyCode == 13) {
+      $("#calculate").click();
+    }
+  });
+
   // This button will increment the value
   $('.qtyplus').click(function(e) {
     // Stop acting like a button
