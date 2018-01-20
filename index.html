@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Tip Calculator</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -32,16 +32,39 @@
     </div>
 
     <div class="row">
-      <div class="slidecontainer">
-        <div class="col-xs-6 col-xs-offset-2">
-          <input type="range" min="5" max="35" value="20" class="slider" id="mySlider" oninput="updateSliderValue()">
+      <p></p>
+      <div class="col-xs-6 col-xs-offset-2 vcenter" style="width:150px">
+        <div class="input-group">
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-secondary btn-number btn-circle qtyminus"  field='quantity'>
+                <span class="glyphicon glyphicon-minus"></span>
+          </button>
+          </span>
+          <input type='text' id="guests" name='quantity' value='1' class='form-control qty' onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-secondary btn-number btn-circle qtyplus" field='quantity'>
+                  <span class="glyphicon glyphicon-plus"></span>
+          </button>
+          </span>
         </div>
-        <div class="col-xs-2">
-          <p><span id="result">20%</span></p>
-        </div>
+      </div>
+      <div class="col-xs-2 vcenter">
+        <span id="percent">Guests</span>
       </div>
     </div>
     
+    <div class="row">
+      <p></p>
+      <div class="slidecontainer">
+        <div class="col-xs-6 col-xs-offset-2 vcenter">
+          <input type="range" min="5" max="35" value="20" class="slider" id="mySlider" oninput="updateSliderValue()">
+        </div>
+        <div class="col-xs-2 vcenter">
+          <span id="percent">20%</span>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col-sm-6 col-sm-offset-2">
         <table class="table">
@@ -50,6 +73,7 @@
               <th>Tip</th>
               <th>Amount</th>
               <th>Total</th>
+              <th>Each pays</th>
             </tr>
           </thead>
           <tbody>
@@ -57,6 +81,7 @@
               <td id="tip"></td>
               <td id="amount"></td>
               <td id="total"></td>
+              <td id="perGuestTotal"></td>
             </tr>
           </tbody>
         </table>
