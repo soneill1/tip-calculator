@@ -1,4 +1,4 @@
-User-agent: Googlebot
-Disallow:
+Sitemap: http://calculate-tip.com/sitemap.xml
 
-sitemap: http://calculate-tip.com/sitemap.xml
+User-Agent: Googlebot
+Disallow:
